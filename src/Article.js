@@ -27,10 +27,11 @@ function Article_new() {
                                         <div className="col-sm-12">
                                             <p className="Date">Date:{index.date}</p>
                                             <p className="Title"> Title:{index.title.rendered}</p>
-                                            <p className="excerpt">{index.parsely.meta.excerpt}</p>
                                             <p className="Ather">Athor-Name:{index.parsely.meta.author[0].name}</p>
+                                            <p className="excerpt">{index.parsely.meta.excerpt}</p>
                                             <p className="publisher">publisher: {index.parsely. meta.publisher.name}</p>
                                             <p className="featured_media">Featured_media:{index.featured_media}</p>
+                                            <p dangerouslySetInnerHTML={{ __html: index.excerpt.rendered }}></p>
                                             <a className="Link_Article1" href={index.guid.rendered}>guid</a>
                                             <a className="Link_Article1" href={index.link}>Learn more informmation</a>
 
