@@ -12,7 +12,7 @@ function Article_new() {
     return (
         <div className="App">
             <div className="navbar">Article</div>
-            <h1 className="text-center heading">Article_new</h1>
+            <h1 className="text-center heading">India Top Article News</h1>
             <hr></hr>
             {articl.map((index) => {
                 return (
@@ -27,7 +27,9 @@ function Article_new() {
                                         <div className="col-sm-12">
                                             <p className="Date">Date:{index.date}</p>
                                             <p className="Title"> Title:{index.title.rendered}</p>
-                                            <p className="Ather">Athor:{index.author}</p>
+                                            <p className="excerpt">{index.parsely.meta.excerpt}</p>
+                                            <p className="Ather">Athor-Name:{index.parsely.meta.author[0].name}</p>
+                                            <p className="publisher">publisher: {index.parsely. meta.publisher.name}</p>
                                             <p className="featured_media">Featured_media:{index.featured_media}</p>
                                             <a className="Link_Article1" href={index.guid.rendered}>guid</a>
                                             <a className="Link_Article1" href={index.link}>Learn more informmation</a>
